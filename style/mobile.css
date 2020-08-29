@@ -370,4 +370,12 @@
     top: 60%;
     font-size: 21px;
   }
+
+  .text-cmt {
+    text-align: center;
+  }
+
+  .text-cmt h5 {
+    font-size: 12px;
+  }
 }
