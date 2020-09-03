@@ -28,7 +28,7 @@ jQuery(function ($) {
             jQuery(this).addClass("open");
         }
 
-        jQuery("#global-navi").stop().animate({
+        jQuery("#gnav").stop().animate({
             right: rightVal
         }, 200);
     });

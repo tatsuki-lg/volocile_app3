@@ -245,7 +245,7 @@
   }
 
   .btn-on-1 {
-    margin-top: 60px;
+    margin-top: 0;
     margin-bottom: 50px;
     padding: 6px 30px;
     background-color: #000;
@@ -289,7 +289,7 @@
 
   .item img {
     width: 100%;
-    height: auto;
+    height: 170px;
   }
 
   /* タイトルの横線 */
@@ -297,6 +297,7 @@
     display: flex;
     align-items: center;
     text-align: center;
+    margin-top: 60px;
   }
 
   .title-border span {
@@ -346,29 +347,31 @@
     display: inline-block;
   }
 
-  /* women'sのテキスト */
-  .item ul li a.link-women {
-    color: rgb(154, 154, 154);
+  /* capのテキスト */
+  .item ul li a.link-cap {
+    color: #fff;
     text-decoration: none;
     position: absolute;
-    left: 24px;
-    top: 60%;
+    left: 55px;
+    top: 55%;
     font-size: 21px;
     text-align: center;
   }
 
   .item ul li a span {
     display: block;
+    font-size: 12px;
   }
 
-  /* men'sのテキスト */
-  .item ul li a.link-men {
+  /* bagのテキスト */
+  .item ul li a.link-bag {
     color: #fff;
     text-decoration: none;
     position: absolute;
-    left: 67%;
-    top: 60%;
+    left: 65%;
+    top: 55%;
     font-size: 21px;
+    text-align: center;
   }
 
   .text-cmt {
