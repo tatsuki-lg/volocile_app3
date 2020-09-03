@@ -16,7 +16,7 @@
 }
 
 .menu {
-  text-align: center;
+  text-align: right;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,7 +36,8 @@
 #wrapper nav ul li {
   display: inline-block;
   font-size: 27px;
-  padding: 30px 40px 0 60px;
+  padding: 30px 0 0 42px;
+  margin-right: 10px;
 }
 
 #wrapper nav ul li a {
@@ -44,13 +45,21 @@
 }
 
 .logo {
-  display: inline-block;
+  display: block;
   color: #fff;
+  float: left;
+  margin: 18px 0px 0px 59px;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 47px;
 }
 
 .logo h3 {
   display: table;
   font-size: 20px;
+  margin-top: -10px;
 }
 
 .font {
