@@ -79,3 +79,19 @@
 .string {
   color: #ffffff;
 }
+
+.img-ktg {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border: 1px;
+  width: 100%;
+}
+
+.btn-on {
+  width: 100%;
+}
