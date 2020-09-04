@@ -15,6 +15,17 @@
   display: none;
 }
 
+.top-text {
+  text-align: center;
+  display: block;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+
 .menu {
   text-align: right;
   position: fixed;
@@ -35,7 +46,7 @@
 
 #wrapper nav ul li {
   display: inline-block;
-  font-size: 27px;
+  font-size: 20px;
   padding: 30px 0 0 42px;
   margin-right: 10px;
 }

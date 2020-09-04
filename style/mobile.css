@@ -19,6 +19,7 @@
     z-index: 2;
   }
 
+  /* スクロールバー実装 */
   .scroll-bar {
     position: absolute;
     text-align: center;
@@ -100,6 +101,7 @@
     }
   }
 
+  /* ------ */
   #wrapper nav ul li {
     display: block;
     padding: 45px 20px;
@@ -115,6 +117,10 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
+  }
+
+  .top-text {
+    display: none;
   }
 
   .menu {

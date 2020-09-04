@@ -25,7 +25,9 @@
                 <h5><b>~life for
                         yourself~</b></h5>
             </div>
-
+            <div class="top-text">
+                何か書きたいならここに書く
+            </div>
         </div>
     </section>
     <section>
