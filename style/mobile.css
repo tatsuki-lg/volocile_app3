@@ -123,6 +123,24 @@
     display: none;
   }
 
+  /* newsのレイアウト */
+  .articles {
+    border-top: 1px solid grey;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .article {
+    padding: 0;
+  }
+
+  .title {
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+
   .menu {
     position: static;
     text-align: center;

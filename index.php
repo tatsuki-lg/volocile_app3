@@ -7,30 +7,41 @@
         </header>
     </div>
     <!-- 投稿一覧 -->
-    <section id="content">
-        <div id="content-wrap" class="container">
-            <div id="main" class="col-md-9" style="width: 100%;">
-                <?php
-                if (have_posts()) :
-                    while (have_posts()) : the_post();
-                ?>
-                        <hr>
-                        <h4><?php the_title(); ?></h4>
-                        <section>
-                            <?php the_content(); ?>
-                        </section>
-                <?php
-                    endwhile;
-                endif;
-                ?>
-            </div>
-        </div>
-    </section>
+    <?php
+    $cat_posts = get_posts(array(
+        'post_type' => 'post', // 投稿タイプ
+        'category_name' => 'news', // カテゴリをスラッグで指定する場合
+        'posts_per_page' => 5, // 表示件数
+        'orderby' => 'date', // 表示順の基準
+        'order' => 'DESC' // 昇順・降順
+    ));
+    global $post;
+    if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
+            <section id="content">
+                <div id="content-wrap" class="container">
+                    <div id="main" class="col-md-9" style="width: 100%;">
+                        <!-- ループはじめ -->
+                        <ul class="articles news">
+                            <li class="article">
+                                <p class="btnes desc">
+                                    <a href="<?php the_permalink() ?>" style="color:#000;"><span class="title"><?php the_title(); ?></span><br><?php the_time('Y/m/d') ?></a>
+                                </p>
+                            </li>
+                        </ul>
+                        <!-- ループおわり -->
+                    </div>
+                </div>
+            </section>
+
+    <?php endforeach;
+    endif;
+    wp_reset_postdata(); ?>
+
     <!-- ここまで -->
-    <!-- <div class="row justify-content-center btn-on">
-        <button type="button" class="btn btn-dark btn-on-1" value="ONLINE_STORE" onclick="location.href='https://livefor0517.base.shop/'">ONLINE
-            STORE &nbsp;&nbsp;&nbsp;<i class="fas fa-shopping-cart"></i></button>
-    </div> -->
+    <!-- <div class=" row justify-content-center btn-on">
+                                        <button type="button" class="btn btn-dark btn-on-1" value="ONLINE_STORE" onclick="location.href='https://livefor0517.base.shop/'">ONLINE
+                                            STORE &nbsp;&nbsp;&nbsp;<i class="fas fa-shopping-cart"></i></button>
+                    </div> -->
     <section>
         <div class="header">
             <header class="header-on">
