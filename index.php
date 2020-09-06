@@ -24,7 +24,15 @@
                         <ul class="articles news">
                             <li class="article">
                                 <p class="btnes desc">
-                                    <a href="<?php the_permalink() ?>" style="color:#000;"><span class="title"><?php the_title(); ?></span><br><?php the_time('Y/m/d') ?></a>
+                                    <a href="<?php the_permalink() ?>" style="color:#000;"><span class="title"><?php the_title(); ?></span></a>
+                                    <div class="news-contents"><?php
+                                                                add_filter('excerpt_length', function ($length) {
+                                                                    return 38; //表示する文字数
+                                                                }, 999);
+                                                                the_excerpt();
+                                                                ?>
+                                    </div>
+                                    <div class="news-day"><?php the_time('Y/m/d') ?></div>
                                 </p>
                             </li>
                         </ul>
@@ -61,11 +69,11 @@
     <div class="item">
         <ul>
             <li><img src="<?php echo get_template_directory_uri(); ?>/images/0af5a4db3d830885a86f5d7e9b674954.jpg" alt="cap">
-                <a class="link-cap" href="#">CAP<span>キャップで探す</span></a>
+                <a class="link-cap" href="https://livefor0517.base.shop/categories/2765494">CAP<span>キャップで探す</span></a>
 
             </li>
             <li><img src="<?php echo get_template_directory_uri(); ?>/images/c9dfa48318e599390f8b99a3f98a197d.jpg" alt="bag">
-                <a class="link-bag">BAG<span>バッグで探す</span></a>
+                <a class="link-bag" href="https://livefor0517.base.shop/categories/2765491">BAG<span>バッグで探す</span></a>
             </li>
         </ul>
     </div>

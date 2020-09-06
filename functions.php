@@ -9,3 +9,14 @@ register_nav_menus(array(
     'gnav' => 'グローバルメニュー',
     'sub-nav' => 'サブメニュー',
 ));
+// newsの文字数制限
+// function custom_excerpt_length($length)
+// {
+//     return 20;    //表示したい文字数
+// }
+// add_filter('excerpt_length', 'custom_excerpt_length', 999);
+function new_excerpt_more($more)
+{
+    return '…'; //変更後の内容
+}
+add_filter('excerpt_more', 'new_excerpt_more');

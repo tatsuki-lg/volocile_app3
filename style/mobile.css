@@ -130,15 +130,29 @@
     box-sizing: border-box;
   }
 
+  .btnes {
+    margin-top: 12px;
+  }
+
   .article {
     padding: 0;
   }
 
   .title {
-    font-size: 0.8em;
+    font-size: 16px;
     font-weight: bold;
     line-height: 1.6;
     letter-spacing: 0.05em;
+  }
+
+  .news-contents {
+    margin-top: -13px;
+  }
+
+  .news-day {
+    margin-top: -12px;
+    color: gray;
+    font-size: 0.7em;
   }
 
   .menu {
