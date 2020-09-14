@@ -56,25 +56,6 @@
                         <i class="fab fa-facebook-square"></i>
                     </div>
                 </nav>
-                <!-- <nav id="global-navi">
-                    <ul class="menu">
-                        <li><a href="https://livefor0517.base.shop/">ONLINE STORE</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <div class="logo">
-                            <h1>volocile</h1>
-                            <h3><b>~life for
-                                    yourself~</b></h3>
-                        </div>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                    <div class="font">
-                        <h6>FOLLOW US</h6>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-facebook-square"></i>
-                    </div>
-                </nav> -->
             </div>
         </header>
     </section>

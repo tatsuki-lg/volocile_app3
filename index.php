@@ -8,7 +8,7 @@
     </div>
     <!-- 投稿一覧 -->
     <?php
-    $cat_posts = get_posts(array(
+    $news_posts = get_posts(array(
         'post_type' => 'post', // 投稿タイプ
         'category_name' => 'news', // カテゴリをスラッグで指定する場合
         'posts_per_page' => 5, // 表示件数
@@ -16,15 +16,14 @@
         'order' => 'DESC' // 昇順・降順
     ));
     global $post;
-    if ($cat_posts) : foreach ($cat_posts as $post) : setup_postdata($post); ?>
+    if ($news_posts) : foreach ($news_posts as $post) : setup_postdata($post); ?>
             <section id="content">
                 <div id="content-wrap" class="container">
                     <div id="main" class="col-md-9" style="width: 100%;">
                         <!-- ループはじめ -->
                         <ul class="articles news">
                             <li class="article">
-                                <p class="btnes desc">
-                                    <a href="<?php the_permalink() ?>" style="color:#000;"><span class="title"><?php the_title(); ?></span></a>
+                                <a href="<?php the_permalink() ?>" style="color:#000; display:block"><span class="title"><?php the_title(); ?></span>
                                     <div class="news-contents"><?php
                                                                 add_filter('excerpt_length', function ($length) {
                                                                     return 38; //表示する文字数
@@ -33,7 +32,7 @@
                                                                 ?>
                                     </div>
                                     <div class="news-day"><?php the_time('Y/m/d') ?></div>
-                                </p>
+                                </a>
                             </li>
                         </ul>
                         <!-- ループおわり -->
@@ -61,7 +60,7 @@
     </section>
     <!-- トレンド欄 -->
     <div class="season">
-        <img class="img-ktg" src="<?php echo get_template_directory_uri(); ?>/images/IMG_6208.JPG" alt="SUMMER">
+        <img class="img-ktg" src="<?php echo get_template_directory_uri(); ?>/images/IMG_6234.JPG" alt="SUMMER">
         <div class="text-season"><a class="link-season" href="#">SPRING &
                 SUMMER</a></div>
     </div>
@@ -86,10 +85,31 @@
             </header>
         </div>
     </section>
-    <div class="season">
-        <img class="img-ktg" src="<?php echo get_template_directory_uri(); ?>/images/IMG_6217.JPG" alt="SUMMER">
-        <div class="text-season"><a class="link-season" href="#">着こなしコーデ</a></div>
-    </div>
+    <?php
+    $news_posts = get_posts(array(
+        'post_type' => 'post', // 投稿タイプ
+        'category_name' => 'outfit', // カテゴリをスラッグで指定する場合
+        'posts_per_page' => 6, // 表示件数
+        'orderby' => 'date', // 表示順の基準
+        'order' => 'DESC' // 昇順・降順
+    ));
+    global $post;
+    if ($news_posts) : foreach ($news_posts as $post) : setup_postdata($post); ?>
+
+            <div class="list" style="display:block;">
+                <!-- ループはじめ -->
+                <hr>
+                <a href="<?php the_permalink() ?>">
+                    <div class="outfit-img"><?php the_post_thumbnail(array(200, 160), array("title" => get_the_title(),)); ?></div>
+                    <h5><?php the_title(); ?></h5>
+
+                    <div class="outfit-day"><?php the_time('Y/m/d') ?></div>
+                </a>
+                <!-- ループおわり -->
+            </div>
+    <?php endforeach;
+    endif;
+    wp_reset_postdata(); ?>
     <section>
         <div class="header">
             <header class="header-collect">

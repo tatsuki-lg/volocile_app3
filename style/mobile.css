@@ -46,6 +46,11 @@
     box-sizing: border-box;
   }
 
+  .scroll-bar:hover {
+    color: white;
+    text-decoration: none;
+  }
+
   .scroll-bar span::before {
     position: absolute;
     top: 10px;
@@ -138,6 +143,10 @@
     padding: 0;
   }
 
+  .article a:hover {
+    color: #666;
+  }
+
   .title {
     font-size: 16px;
     font-weight: bold;
@@ -146,13 +155,25 @@
   }
 
   .news-contents {
-    margin-top: -13px;
+    margin-top: 0;
   }
 
   .news-day {
     margin-top: -12px;
     color: gray;
     font-size: 0.7em;
+  }
+
+  /* コーデ特集 */
+  /* .outfit-img {
+    display: inline;
+  } */
+
+  .outfit-day {
+    margin-top: -12px;
+    color: gray;
+    font-size: 0.7em;
+    float: right;
   }
 
   .menu {
@@ -300,6 +321,7 @@
     margin-bottom: 60px;
   }
 
+  /* summerの画像レイアウト */
   .img-ktg {
     top: 0;
     bottom: 0;
@@ -308,8 +330,41 @@
     width: 100%;
     height: auto;
     margin: auto;
-    border: 1px;
+  }
+
+  /* SPRING $ SUMMERのテキスト */
+  .season {
+    position: relative;
+  }
+
+  .season div.text-season {
+    position: absolute;
     width: 100%;
+    left: 0;
+    top: calc(50% - 25px);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  .season div.text-season .link-season {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
+  /* 着こなし */
+  .img-outfit {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    margin: auto;
   }
 
   /* womenとmenの画像 */
@@ -362,28 +417,6 @@
     margin-top: -6px;
   }
 
-  /* SPRING $ SUMMERのテキスト */
-  .season {
-    position: relative;
-  }
-
-  .season div.text-season {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: calc(50% - 25px);
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 50px;
-  }
-
-  .season div.text-season .link-season {
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-  }
 
   /* capのテキスト */
   .item ul li a.link-cap {
