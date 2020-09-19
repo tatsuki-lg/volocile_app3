@@ -11,6 +11,11 @@
   background-size: cover;
 }
 
+.container {
+  text-align: -webkit-center;
+}
+
+
 .logo-main {
   display: none;
 }
