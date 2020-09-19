@@ -17,10 +17,10 @@
     ));
     global $post;
     if ($news_posts) : foreach ($news_posts as $post) : setup_postdata($post); ?>
+            <!-- ループはじめ -->
             <section id="content">
                 <div id="content-wrap" class="container">
                     <div id="main" class="col-md-9" style="width: 100%;">
-                        <!-- ループはじめ -->
                         <ul class="articles news">
                             <li class="article-news">
                                 <a href="<?php the_permalink() ?>" style="color:#000; display:block"><span class="title"><?php the_title(); ?></span>
@@ -35,14 +35,14 @@
                                 </a>
                             </li>
                         </ul>
-                        <!-- ループおわり -->
                     </div>
                 </div>
             </section>
-
+            <!-- ループおわり -->
     <?php endforeach;
     endif;
     wp_reset_postdata(); ?>
+    <a href="<?php the_permalink() ?>" role="button" class="btn btn-outline-secondary mx-auto d-block" style="width: fit-content;margin-top: 60px;">もっと見る</a>
 
     <!-- ここまで -->
     <!-- <div class=" row justify-content-center btn-on">
@@ -115,6 +115,8 @@
     <?php endforeach;
     endif;
     wp_reset_postdata(); ?>
+    <a href="<?php the_permalink() ?>" role="button" class="btn btn-outline-secondary mx-auto d-block" style="width: fit-content;margin-top: 60px;">もっと見る</a>
+
     <section>
         <div class="header">
             <header class="header-collect">
