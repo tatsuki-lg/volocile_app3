@@ -115,3 +115,11 @@
 .btn-on {
   width: 100%;
 }
+
+.outfit-img {
+  text-align: center;
+}
+
+.outfit-img h5 {
+  display: contents;
+}

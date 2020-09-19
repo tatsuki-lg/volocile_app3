@@ -14,3 +14,4 @@ function new_excerpt_more($more)
     return '…'; //変更後の内容
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+add_theme_support('post-thumbnails');

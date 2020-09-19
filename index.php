@@ -22,7 +22,7 @@
                     <div id="main" class="col-md-9" style="width: 100%;">
                         <!-- ループはじめ -->
                         <ul class="articles news">
-                            <li class="article">
+                            <li class="article-news">
                                 <a href="<?php the_permalink() ?>" style="color:#000; display:block"><span class="title"><?php the_title(); ?></span>
                                     <div class="news-contents"><?php
                                                                 add_filter('excerpt_length', function ($length) {
@@ -86,27 +86,32 @@
         </div>
     </section>
     <?php
-    $news_posts = get_posts(array(
+    $outfit_posts = get_posts(array(
         'post_type' => 'post', // 投稿タイプ
         'category_name' => 'outfit', // カテゴリをスラッグで指定する場合
-        'posts_per_page' => 6, // 表示件数
+        'posts_per_page' => 3, // 表示件数
         'orderby' => 'date', // 表示順の基準
         'order' => 'DESC' // 昇順・降順
     ));
     global $post;
-    if ($news_posts) : foreach ($news_posts as $post) : setup_postdata($post); ?>
-
-            <div class="list" style="display:block;">
-                <!-- ループはじめ -->
-                <hr>
-                <a href="<?php the_permalink() ?>">
-                    <div class="outfit-img"><?php the_post_thumbnail(array(200, 160), array("title" => get_the_title(),)); ?></div>
-                    <h5><?php the_title(); ?></h5>
-
-                    <div class="outfit-day"><?php the_time('Y/m/d') ?></div>
-                </a>
-                <!-- ループおわり -->
-            </div>
+    if ($outfit_posts) : foreach ($outfit_posts as $post) : setup_postdata($post); ?>
+            <section id="content">
+                <div id="content-wrap" class="container">
+                    <div id="main" class="col-md-9" style="width: 100%;">
+                        <!-- ループはじめ -->
+                        <ul class="articles news">
+                            <a href="<?php the_permalink() ?>">
+                                <li class="article-outfit">
+                                    <?php the_post_thumbnail(array(314, 250)); ?>
+                                    <h2><?php the_title(); ?></h2>
+                                    <div class="outfit-day"><?php the_time('Y/m/d') ?></div>
+                                </li>
+                            </a>
+                        </ul>
+                        <!-- ループおわり -->
+                    </div>
+                </div>
+            </section>
     <?php endforeach;
     endif;
     wp_reset_postdata(); ?>

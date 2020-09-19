@@ -55,7 +55,7 @@
     position: absolute;
     top: 10px;
     left: 50%;
-    content: '';
+    content: "";
     width: 6px;
     height: 6px;
     margin-left: -3px;
@@ -139,12 +139,19 @@
     margin-top: 12px;
   }
 
-  .article {
+  .article-news {
     padding: 0;
   }
 
-  .article a:hover {
-    color: #666;
+  .article-outfit {
+    padding-top: 13px;
+  }
+
+  .articles h2 {
+    color: black;
+    font-size: 14px;
+    margin-top: 6px;
+    position: relative;
   }
 
   .title {
@@ -169,10 +176,10 @@
     display: inline;
   } */
 
-  .outfit-day {
+  .article-outfit .outfit-day {
     margin-top: -12px;
     color: gray;
-    font-size: 0.7em;
+    font-size: 12px;
     float: right;
   }
 
@@ -355,7 +362,6 @@
     display: inline-block;
   }
 
-
   /* 着こなし */
   .img-outfit {
     top: 0;
@@ -416,7 +422,6 @@
     margin-left: 1rem;
     margin-top: -6px;
   }
-
 
   /* capのテキスト */
   .item ul li a.link-cap {
