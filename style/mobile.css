@@ -334,9 +334,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 375px;
     height: auto;
     margin: auto;
+    display: block;
   }
 
   /* SPRING $ SUMMERのテキスト */
@@ -375,20 +376,21 @@
 
   /* womenとmenの画像 */
   .item {
-    display: table;
     position: relative;
   }
 
   .item li {
-    display: table-cell;
-    height: auto;
-    width: 50%;
-    /* border: solid 1px rgb(162 162 162); */
+    display: inline;
+  }
+
+  .item ul {
+    text-align: center;
   }
 
   .item img {
-    width: 100%;
-    height: 170px;
+    display: inline-block;
+    width: 186px;
+    height: 150px;
   }
 
   /* タイトルの横線 */
@@ -425,7 +427,7 @@
 
   /* capのテキスト */
   .item ul li a.link-cap {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     position: absolute;
     left: 55px;
@@ -441,7 +443,7 @@
 
   /* bagのテキスト */
   .item ul li a.link-bag {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     position: absolute;
     left: 65%;

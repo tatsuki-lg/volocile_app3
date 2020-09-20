@@ -1,5 +1,17 @@
     <footer>
-
+        <h4>VOLOCILE</h4>
+        <ul class="footer-menu">
+            <li>| ONLINE STORE |</li>
+            <li>NEWS |</li>
+            <li>CONTACT |</li>
+            <li>ABOUT |</li>
+        </ul>
+        <div class="footer-font">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-square"></i>
+        </div>
+        <p>© 2020 volocile.</p>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
