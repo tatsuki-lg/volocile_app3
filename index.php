@@ -56,25 +56,28 @@
                     <h4>PRODUCTS<span>ファッションアイテム</span></h4>
                 </div>
             </header>
+            <h6>standardカジュアルや新作コレクション<br>
+                おすすめラインナップの特徴やスペックをご紹介。</h6>
         </div>
     </section>
     <!-- トレンド欄 -->
     <div class="season">
         <img class="img-ktg" src="<?php echo get_template_directory_uri(); ?>/images/IMG_6234.JPG" alt="SUMMER">
-        <div class="text-season"><a class="link-season" href="#">SPRING &
-                SUMMER</a></div>
+        <div class="text-season"><a class="link-season" href="#">FASHION
+                ITEM</a></div>
     </div>
     <!-- アイテム欄 -->
-    <div class="item">
-        <ul>
-            <li><img src="<?php echo get_template_directory_uri(); ?>/images/0af5a4db3d830885a86f5d7e9b674954.jpg" alt="cap">
-                <a class="link-cap" href="https://livefor0517.base.shop/categories/2765494">CAP<span>キャップで探す</span></a>
-
-            </li>
-            <li><img src="<?php echo get_template_directory_uri(); ?>/images/c9dfa48318e599390f8b99a3f98a197d.jpg" alt="bag">
-                <a class="link-bag" href="https://livefor0517.base.shop/categories/2765491">BAG<span>バッグで探す</span></a>
-            </li>
-        </ul>
+    <div class="item-box">
+        <div class="item-img-cap">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/0af5a4db3d830885a86f5d7e9b674954.jpg" alt="cap">
+            <a href="#">CAP一覧</a>
+        </div>
+        <!-- <a class="link-cap" href="https://livefor0517.base.shop/categories/2765494">CAP<span>キャップで探す</span></a> -->
+        <div class="item-img-bag">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/c9dfa48318e599390f8b99a3f98a197d.jpg" alt="bag">
+            <!-- <a class="link-bag" href="https://livefor0517.base.shop/categories/2765491">BAG<span>バッグで探す</span></a> -->
+            <a href="#">BAG一覧</a>
+        </div>
     </div>
     <section>
         <div class="header">
